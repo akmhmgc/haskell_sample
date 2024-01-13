@@ -23,4 +23,9 @@ addThree x y z = x + y + z
 
 lucky :: Int -> String
 lucky 7 = "LUCKY NUMBER SEVEN!"
-lucky x = "Sorry, you're out of luck, pal!"
+lucky x = show x ++ " is not a lucky number"
+
+-- 再帰
+factorial :: Int -> Int
+factorial 0 = 1
+factorial n = n * factorial (n - 1)
