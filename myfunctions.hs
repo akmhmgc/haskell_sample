@@ -20,3 +20,7 @@ addOne x = x
 
 addThree :: Int -> Int -> Int -> Int
 addThree x y z = x + y + z
+
+lucky :: Int -> String
+lucky 7 = "LUCKY NUMBER SEVEN!"
+lucky x = "Sorry, you're out of luck, pal!"
