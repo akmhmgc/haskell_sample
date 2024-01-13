@@ -29,3 +29,25 @@ lucky x = show x ++ " is not a lucky number"
 factorial :: Int -> Int
 factorial 0 = 1
 factorial n = n * factorial (n - 1)
+
+addVectors :: (Double, Double) -> (Double, Double) -> (Double, Double)
+addVectors (x1, y1) (x2, y2) = (x1 + x2, y1 + y2)
+
+first :: (a,b,c) -> a
+first (x, _,_ ) = x
+
+head' :: [a] -> a
+head' [] = error "error"
+-- head' [x,_,_] = x
+head' (x:_) = x
+
+head2 :: [a] -> [a]
+head2 [] = error "error"
+head2 (x:y:_) = [x,y]
+
+test:: Int -> String
+test score
+  | score < 50 = "you are idiot"
+  | score < 70 = "you are so so"
+  | score < 90 = "you are good"
+  | otherwise = "you are genius"
