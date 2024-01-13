@@ -47,7 +47,11 @@ head2 (x:y:_) = [x,y]
 
 test:: Int -> String
 test score
-  | score < 50 = "you are idiot"
-  | score < 70 = "you are so so"
-  | score < 90 = "you are good"
+  | score < idiot = "you are idiot"
+  | score < so_so = "you are so so"
+  | score < good = "you are good"
   | otherwise = "you are genius"
+  -- whereで変数を定義できる
+  where idiot = 50
+        so_so = 70
+        good = 90
