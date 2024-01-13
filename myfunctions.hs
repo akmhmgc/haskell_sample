@@ -55,3 +55,9 @@ test score
   where idiot = 50
         so_so = 70
         good = 90
+
+greet :: String -> String
+greet "Taro" = "Hello Taro"
+greet name = greeting
+  -- greetingは`greet name = greeting`でしか使えない
+  where greeting = "Go away"
