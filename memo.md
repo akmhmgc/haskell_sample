@@ -60,3 +60,27 @@ addThree x y z = x + y + z
   - CharもIntもEq型クラスのインスタンス
 - ある型クラスのインスタンスであるためには他の型クラスのインスタンスであることが必須である場合がある
   - Ord型クラスのインスタンスになるためにはEqクラスのインスタンスであることが必須
+
+# 関数の構文
+
+## パターンマッチ
+
+```hs
+lucky :: Int -> String
+lucky 7 = "LUCKY NUMBER SEVEN!"
+lucky x = "Sorry, you're out of luck, pal!"
+
+lucky 7
+-- "LUCKY NUMBER SEVEN!"
+
+lucky 1
+-- "Sorry, you're out of luck, pal!"
+```
+
+再起
+
+```hs
+factorial :: Int -> Int
+factorial 0 = 1
+factorial n = n * factorial (n - 1)
+```
