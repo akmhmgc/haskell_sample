@@ -61,3 +61,12 @@ greet "Taro" = "Hello Taro"
 greet name = greeting
   -- greetingは`greet name = greeting`でしか使えない
   where greeting = "Go away"
+
+-- パターンマッチとwhereを組み合わせる
+initials :: String -> String -> String
+initials firstname lastname = [f] ++ ". " ++ [l] ++ "."
+  where (f:_) = firstname
+        (l:_) = lastname
+
+-- initials "Taro" "Yamada"
+-- "T. Y."
